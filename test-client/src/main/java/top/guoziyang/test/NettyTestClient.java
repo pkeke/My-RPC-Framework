@@ -16,6 +16,7 @@ import top.guoziyang.rpc.transport.netty.client.NettyClient;
 public class NettyTestClient {
 
     public static void main(String[] args) {
+        System.out.println("hello world!!");
         RpcClient client = new NettyClient(CommonSerializer.PROTOBUF_SERIALIZER);
         RpcClientProxy rpcClientProxy = new RpcClientProxy(client);
         HelloService helloService = rpcClientProxy.getProxy(HelloService.class);
